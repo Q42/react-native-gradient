@@ -1,6 +1,10 @@
 {
   "name": "react-native-gradient",
+  "description": "Gradient component for React Native",
   "version": "0.1.0",
+  "homepage": "https://github.com/Q42/react-native-gradient",
+  "author": "Q42: https://q42.nl",
+  "license": "MIT",
   "keywords": ["react-native", "gradient", "linear", "radial"],
   "main": "js/index.js",
   "peerDependencies": {
