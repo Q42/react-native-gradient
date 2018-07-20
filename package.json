@@ -2,7 +2,7 @@
   "name": "react-native-gradient",
   "version": "0.1.0",
   "keywords": ["react-native", "gradient", "linear", "radial"],
-  "main": "index.js",
+  "main": "js/index.js",
   "peerDependencies": {
     "react-native": "^0.55.4"
   },
