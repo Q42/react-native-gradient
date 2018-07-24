@@ -17,7 +17,6 @@ import Gradient from 'react-native-gradient';
 
 # TODO
 
-- Android
 - Documentation
 - Tests
 - Angle support
