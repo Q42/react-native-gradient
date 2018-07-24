@@ -38,9 +38,9 @@ class RNQ42GradientView(context: Context) :  View(context) {
         val orientation = GradientDrawable.Orientation.TOP_BOTTOM
         val gradientDrawable = GradientDrawable(orientation, colors)
 
-        when(GradientType.RADIAL) {
             GradientType.LINEAR -> this.applyLinearProperties(gradientDrawable)
             GradientType.RADIAL -> this.applyRadialProperties(gradientDrawable)
+        when(type) {
         }
 
         this.setBackground(gradientDrawable)
