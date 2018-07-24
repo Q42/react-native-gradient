@@ -3,7 +3,6 @@ package com.q42.rngradient;
 import javax.inject.Inject
 import javax.inject.Singleton
 
-import android.view.ViewGroup
 import android.graphics.PointF
 
 import com.facebook.react.bridge.ReadableArray
