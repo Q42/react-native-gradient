@@ -34,7 +34,7 @@ class RNQ42GradientViewManager @Inject constructor() : SimpleViewManager<RNQ42Gr
 
     @ReactProp(name = "type")
     fun setType(view: RNQ42GradientView, source: String) {
-        view.setType(GradientType.fromString(source))
+        view.type = GradientType.fromString(source)
     }
 
     @ReactProp(name = "colors")
@@ -46,7 +46,7 @@ class RNQ42GradientViewManager @Inject constructor() : SimpleViewManager<RNQ42Gr
         }
 
         // Send them through:
-        view.setColors(colors)
+        view.colors = colors
     }
 
     @ReactProp(name = "locations")
@@ -56,7 +56,7 @@ class RNQ42GradientViewManager @Inject constructor() : SimpleViewManager<RNQ42Gr
 
     @ReactProp(name = "radialRadius")
     fun setRadialRadius(view: RNQ42GradientView, source: Float) {
-        view.setRadialRadius(source)
+        view.radialRadius = source
     }
 
     @ReactProp(name = "radialCenter")
@@ -64,6 +64,6 @@ class RNQ42GradientViewManager @Inject constructor() : SimpleViewManager<RNQ42Gr
         val x = source.getDouble(0).toFloat()
         val y = source.getDouble(1).toFloat()
         val c = PointF(x, y)
-        view.setRadialCenter(c)
+        view.radialCenter = c
     }
 }

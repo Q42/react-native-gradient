@@ -8,42 +8,26 @@ import android.graphics.PointF
 import android.graphics.drawable.GradientDrawable
 
 class RNQ42GradientView(context: Context) :  View(context) {
-    private var _type: GradientType? = null
-    private var _colors: IntArray? = null
-    private var _radialRadius: Float? = null
-    private var _radialCenter: PointF? = null
-
-    fun setType(value: GradientType) {
-        this._type = value
-    }
-
-    fun setColors(value: IntArray) {
-        this._colors = value
-    }
-
-    fun setRadialRadius(value: Float) {
-        this._radialRadius = value
-    }
-
-    fun setRadialCenter(value: PointF) {
-        this._radialCenter = value
-    }
+    var type: GradientType? = null
+    var colors: IntArray? = null
+    var radialRadius: Float? = null
+    var radialCenter: PointF? = null
 
     override fun onDraw(canvas: Canvas?) {
         super.onDraw(canvas)
 
-        val type = this._type?.let { it } ?: return
-        val colors = this._colors?.let { it } ?: return
+        val type = this.type?.let { it } ?: return
+        val colors = this.colors?.let { it } ?: return
 
         val orientation = GradientDrawable.Orientation.TOP_BOTTOM
         val gradientDrawable = GradientDrawable(orientation, colors)
 
-            GradientType.LINEAR -> this.applyLinearProperties(gradientDrawable)
-            GradientType.RADIAL -> this.applyRadialProperties(gradientDrawable)
         when(type) {
+            GradientType.LINEAR -> applyLinearProperties(gradientDrawable)
+            GradientType.RADIAL -> applyRadialProperties(gradientDrawable)
         }
 
-        this.setBackground(gradientDrawable)
+        setBackground(gradientDrawable)
     }
 
     private fun applyLinearProperties(gradientDrawable: GradientDrawable) {
@@ -51,11 +35,11 @@ class RNQ42GradientView(context: Context) :  View(context) {
     }
 
     private fun applyRadialProperties(gradientDrawable: GradientDrawable) {
-        val r = this._radialRadius?.let { it } ?: return
-        val c = this._radialCenter?.let { it } ?: return
+        val radialRadius = this.radialRadius?.let { it } ?: return
+        val radialCenter = this.radialCenter?.let { it } ?: return
 
         gradientDrawable.setGradientType(GradientDrawable.RADIAL_GRADIENT)
-        gradientDrawable.setGradientRadius(r)
-        gradientDrawable.setGradientCenter(c.x, c.y)
+        gradientDrawable.setGradientRadius(radialRadius)
+        gradientDrawable.setGradientCenter(radialCenter.x, radialCenter.y)
     }
 }
