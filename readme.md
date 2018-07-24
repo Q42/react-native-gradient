@@ -22,3 +22,4 @@ import Gradient from 'react-native-gradient';
 - Tests
 - Angle support
 - TypeScript definitions
+- Check installation without CocoaPods
