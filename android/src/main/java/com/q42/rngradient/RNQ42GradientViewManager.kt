@@ -10,9 +10,8 @@ import com.facebook.react.uimanager.SimpleViewManager
 import com.facebook.react.uimanager.ThemedReactContext
 import com.facebook.react.uimanager.annotations.ReactProp
 
-enum class GradientType(val value: String) {
-    LINEAR("linear"),
-    RADIAL("radial");
+enum class GradientType {
+    LINEAR, RADIAL;
 
     companion object {
         fun fromString(type: String): GradientType {
