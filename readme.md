@@ -2,6 +2,15 @@
 
 Gradient component for React Native.
 
+## Requirements
+
+- iOS
+	- Swift (see the last note on [this piece of documentation](https://facebook.github.io/react-native/docs/native-modules-ios#exporting-swift) for more info)
+	- CocoaPods
+- Android
+	- Kotlin
+	- Gradle
+
 ## Installation
 
 First, use NPM to install this package:
@@ -14,9 +23,7 @@ After this you can continue the installation for one (or all) platforms below.
 
 ### iOS
 
-#### CocoaPods
-
-If you'd like to use CocoaPods, add the following to your Podfile:
+The only supported method of installing react-native-gradients is through CocoaPods. To do so, add the following to your Podfile:
 
 ```
 pod 'react-native-gradient', :path => 'node_modules/react-native-gradient/ios'
@@ -24,7 +31,7 @@ pod 'react-native-gradient', :path => 'node_modules/react-native-gradient/ios'
 
 ### Android
 
-#### Gradle
+The only supported method of installing react-native-gradients is through Gradle. To do so, follow these steps:
 
 1. Open up `android/app/src/main/java/[...]/MainActivity.java`
 		- Add `import com.q42.rngradient.GradientPackage;` to the imports at the top of the file
@@ -80,4 +87,6 @@ import Gradient from 'react-native-gradient';
 - Tests
 - Angle support
 - TypeScript definitions
-- Installing it without CocoaPods
+- Remove the CocoaPods requirement
+- Remove the Kotlin requirement
+- Remove the Swift requirement
