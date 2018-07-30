@@ -55,6 +55,7 @@ import Gradient from 'react-native-gradient';
 
 - `colors` (required): An array of css-style colors, from the beginning to the end of the gradient.
 - `locations` (optional, iOS only): An array of numbers, to manipulate how the gradient is drawn. For example, you can give it `[0.8, 1.0]` to show the first color for 80% of the gradient.
+- Any other view-related props (like `style`, `transform` or `pointerEvents`) are passed through, so feel free to use those if you need them.
 
 ### Radial gradient
 
@@ -72,6 +73,7 @@ import Gradient from 'react-native-gradient';
 - `radius` (required): A number of the size (points) of the radius.
 - `locations` (optional, iOS only): An array of numbers, to manipulate how the gradient is drawn. For example, you can give it `[0.8, 1.0]` to show the first color for 80% of the gradient.
 - `center` (optional): An array of exactly two numbers who define the center of the gradient in percentages. Defaults to `[0.5, 0.5]`.
+- Any other view-related props (like `style`, `transform` or `pointerEvents`) are passed through, so feel free to use those if you need them.
 
 ## TODO
 
