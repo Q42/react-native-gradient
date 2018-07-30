@@ -10,7 +10,7 @@
 #import <React/RCTBridgeModule.h>
 #import <React/RCTViewManager.h>
 
-@interface RCT_EXTERN_MODULE(RNQ42GradientViewManager, RCTViewManager)
+@interface RCT_EXTERN_MODULE(RNQ42GradientManager, RCTViewManager)
 
 RCT_EXPORT_VIEW_PROPERTY(type, NSString)
 RCT_EXPORT_VIEW_PROPERTY(colors, NSArray<UIColor>)

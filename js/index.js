@@ -49,7 +49,7 @@ type RadialProps = {
   center?: $PropertyType<NativeProps, 'radialCenter'>,
 };
 
-const NativeView = requireNativeComponent('RNQ42GradientView', Gradient);
+const NativeView = requireNativeComponent('RNQ42Gradient', Gradient);
 
 export default {
   Linear: (props: LinearProps) => (

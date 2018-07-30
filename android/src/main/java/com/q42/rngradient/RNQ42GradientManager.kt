@@ -25,8 +25,8 @@ enum class GradientType {
 }
 
 @Singleton
-class RNQ42GradientViewManager @Inject constructor() : SimpleViewManager<RNQ42GradientView>() {
-    override fun getName() = "RNQ42GradientView"
+class RNQ42GradientManager @Inject constructor() : SimpleViewManager<RNQ42GradientView>() {
+    override fun getName() = "RNQ42Gradient"
 
     override fun createViewInstance(reactContext: ThemedReactContext): RNQ42GradientView {
         return RNQ42GradientView(reactContext)

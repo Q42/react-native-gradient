@@ -9,8 +9,8 @@
 import Foundation
 import React
 
-@objc(RNQ42GradientViewManager)
-class RNQ42GradientViewManager: RCTViewManager {
+@objc(RNQ42GradientManager)
+class RNQ42GradientManager: RCTViewManager {
   override static func requiresMainQueueSetup() -> Bool {
     return false
   }
