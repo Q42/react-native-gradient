@@ -2,16 +2,33 @@
 
 Gradient component for React Native.
 
-# iOS
+# Installation
+
+First, use NPM to install this package:
+
+```
+npm install react-native-gradient --save
+```
+
+After this you can continue the installation for one (or all) platforms below.
+
+## iOS
+
+### CocoaPods
+
+If you'd like to use CocoaPods, add the following to your Podfile:
 
 ```
 pod 'react-native-gradient', :path => 'node_modules/react-native-gradient/ios'
 ```
 
-# Android
+## Android
+
+### Gradle
+
 1. Open up `android/app/src/main/java/[...]/MainActivity.java`
-  - Add `import com.q42.rngradient.GradientPackage;` to the imports at the top of the file
-  - Add `new GradientPackage()` to the list returned by the `getPackages()` method
+		- Add `import com.q42.rngradient.GradientPackage;` to the imports at the top of the file
+		- Add `new GradientPackage()` to the list returned by the `getPackages()` method
 2. Append the following lines to `android/settings.gradle`:
   	```
   	include ':react-native-gradient'
@@ -22,18 +39,43 @@ pod 'react-native-gradient', :path => 'node_modules/react-native-gradient/ios'
       compile project(':react-native-gradient')
   	```
 
-# JS
+# Usage
 
-```
+## Linear gradient
+
+The linear gradient is a component like any other:
+
+```jsx
 import Gradient from 'react-native-gradient';
+
 <Gradient.Linear colors={['red', 'blue']} />
+```
+
+### Props
+
+- `colors` (required): An array of css-style colors, from the beginning to the end of the gradient.
+- `locations` (optional, iOS only): An array of numbers, to manipulate how the gradient is drawn. For example, you can give it `[0.8, 1.0]` to show the first color for 80% of the gradient.
+
+## Radial gradient
+
+The radial gradient is a component like any other:
+
+```jsx
+import Gradient from 'react-native-gradient';
+
 <Gradient.Radial colors={['red', 'blue']} radius={200} />
 ```
 
+### Props
+
+- `colors` (required): An array of css-style colors, from the beginning to the end of the gradient.
+- `radius` (required): A number of the size (points) of the radius.
+- `locations` (optional, iOS only): An array of numbers, to manipulate how the gradient is drawn. For example, you can give it `[0.8, 1.0]` to show the first color for 80% of the gradient.
+- `center` (optional): An array of exactly two numbers who define the center of the gradient in percentages. Defaults to `[0.5, 0.5]`.
+
 # TODO
 
-- Documentation
 - Tests
 - Angle support
 - TypeScript definitions
-- Check installation without CocoaPods
+- Installing it without CocoaPods
