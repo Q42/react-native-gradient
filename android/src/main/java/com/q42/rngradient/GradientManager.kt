@@ -25,20 +25,20 @@ enum class GradientType {
 }
 
 @Singleton
-class RNQ42GradientManager @Inject constructor() : SimpleViewManager<RNQ42GradientView>() {
+class GradientManager @Inject constructor() : SimpleViewManager<GradientView>() {
     override fun getName() = "RNQ42Gradient"
 
-    override fun createViewInstance(reactContext: ThemedReactContext): RNQ42GradientView {
-        return RNQ42GradientView(reactContext)
+    override fun createViewInstance(reactContext: ThemedReactContext): GradientView {
+        return GradientView(reactContext)
     }
 
     @ReactProp(name = "type")
-    fun setType(view: RNQ42GradientView, source: String) {
+    fun setType(view: GradientView, source: String) {
         view.type = GradientType.fromString(source)
     }
 
     @ReactProp(name = "colors")
-    fun setColors(view: RNQ42GradientView, source: ReadableArray) {
+    fun setColors(view: GradientView, source: ReadableArray) {
         // Convert ReadableArray to IntArray:
         val colors = IntArray(source.size())
         for (i in colors.indices) {
@@ -50,17 +50,17 @@ class RNQ42GradientManager @Inject constructor() : SimpleViewManager<RNQ42Gradie
     }
 
     @ReactProp(name = "locations")
-    fun setLocations(view: RNQ42GradientView, source: ReadableArray) {
+    fun setLocations(view: GradientView, source: ReadableArray) {
         // Not supported at the moment
     }
 
     @ReactProp(name = "radialRadius")
-    fun setRadialRadius(view: RNQ42GradientView, source: Float) {
+    fun setRadialRadius(view: GradientView, source: Float) {
         view.radialRadius = source
     }
 
     @ReactProp(name = "radialCenter")
-    fun setRadialCenter(view: RNQ42GradientView, source: ReadableArray) {
+    fun setRadialCenter(view: GradientView, source: ReadableArray) {
         val x = source.getDouble(0).toFloat()
         val y = source.getDouble(1).toFloat()
         val c = PointF(x, y)

@@ -7,7 +7,7 @@ import android.graphics.Canvas
 import android.graphics.PointF
 import android.graphics.drawable.GradientDrawable
 
-class RNQ42GradientView(context: Context) :  View(context) {
+class GradientView(context: Context) :  View(context) {
     var type: GradientType? = null
     var colors: IntArray? = null
     var radialRadius: Float? = null

@@ -10,8 +10,8 @@ pod 'react-native-gradient', :path => 'node_modules/react-native-gradient'
 
 # Android
 1. Open up `android/app/src/main/java/[...]/MainActivity.java`
-  - Add `import com.q42.rngradient;` to the imports at the top of the file
-  - Add `new RNQ42GradientPackage()` to the list returned by the `getPackages()` method
+  - Add `import com.q42.rngradient.GradientPackage;` to the imports at the top of the file
+  - Add `new GradientPackage()` to the list returned by the `getPackages()` method
 2. Append the following lines to `android/settings.gradle`:
   	```
   	include ':react-native-gradient'
