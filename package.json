@@ -12,6 +12,9 @@
     "radial"
   ],
   "main": "js/index.js",
+  "scripts": {
+    "release": "release-it"
+  },
   "peerDependencies": {
     "react-native": "^0.55.4"
   },
@@ -19,6 +22,6 @@
     "prop-types": "^15.6.2"
   },
   "devDependencies": {
-    "release": "^4.0.1"
+    "release-it": "^7.4.8"
   }
 }
