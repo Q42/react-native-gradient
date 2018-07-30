@@ -5,7 +5,7 @@ Gradient component for React Native.
 # iOS
 
 ```
-pod 'react-native-gradient', :path => 'node_modules/react-native-gradient'
+pod 'react-native-gradient', :path => 'node_modules/react-native-gradient/ios'
 ```
 
 # Android
