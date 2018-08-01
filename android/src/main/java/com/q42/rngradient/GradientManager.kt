@@ -3,6 +3,7 @@ package com.q42.rngradient;
 import javax.inject.Inject
 import javax.inject.Singleton
 
+import android.content.res.Resources
 import android.graphics.PointF
 
 import com.facebook.react.bridge.ReadableArray
@@ -56,7 +57,7 @@ class GradientManager @Inject constructor() : SimpleViewManager<GradientView>() 
 
     @ReactProp(name = "radialRadius")
     fun setRadialRadius(view: GradientView, source: Float) {
-        view.radialRadius = source
+        view.radialRadius = pointsToPixels(source)
     }
 
     @ReactProp(name = "radialCenter")
@@ -65,5 +66,9 @@ class GradientManager @Inject constructor() : SimpleViewManager<GradientView>() 
         val y = source.getDouble(1).toFloat()
         val c = PointF(x, y)
         view.radialCenter = c
+    }
+
+    private fun pointsToPixels(points: Float): Float {
+        return points * Resources.getSystem().getDisplayMetrics().density
     }
 }
