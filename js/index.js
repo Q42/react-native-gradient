@@ -2,7 +2,9 @@
 
 import * as React from 'react';
 import PropTypes from 'prop-types';
-import {requireNativeComponent, ViewPropTypes, processColor} from 'react-native';
+import {requireNativeComponent, processColor} from 'react-native';
+
+const NativeView = requireNativeComponent('RNQ42Gradient');
 
 class Gradient extends React.Component<NativeProps> {
   static propTypes = {
@@ -11,7 +13,6 @@ class Gradient extends React.Component<NativeProps> {
     locations: PropTypes.arrayOf(PropTypes.number),
     radialRadius: PropTypes.number,
     radialCenter: PropTypes.arrayOf(PropTypes.number),
-    ...ViewPropTypes, // Include default react view props
   };
 
   static defaultProps = {
@@ -48,8 +49,6 @@ type RadialProps = {
   radius: number, // Not optional in case of a radial
   center?: $PropertyType<NativeProps, 'radialCenter'>,
 };
-
-const NativeView = requireNativeComponent('RNQ42Gradient', Gradient);
 
 export default {
   Linear: (props: LinearProps) => (
