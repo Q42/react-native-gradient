@@ -86,7 +86,6 @@ import Gradient from 'react-native-gradient';
 
 - Tests
 - Angle support
-- TypeScript definitions
 - Remove the CocoaPods requirement
 - Remove the Kotlin requirement
 - Remove the Swift requirement

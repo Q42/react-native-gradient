@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   s.license                 = package['license']
   s.author                  = { 'Q42' => 'https://q42.nl' }
   s.ios.deployment_target   = '10.0'
-  s.source                  = { :git => 'https://github.com/Q42/react-native-gradient.git', :tag => '#{s.version}' }
+  s.source                  = { :git => 'https://github.com/Q42/react-native-gradient.git', :tag => "#{s.version}" }
   s.source_files            = 'RNQ42Gradient/*.{h,m,swift}'
   s.preserve_paths          = '**/*.js'
 
