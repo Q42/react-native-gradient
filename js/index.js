@@ -25,15 +25,12 @@ class Gradient extends React.Component<NativeProps> {
   }
 }
 
-type GradientType =
-  | 'linear'
-  | 'radial'
-  ;
+type GradientType = 'linear' | 'radial';
 
 type NativeProps = {
   type: GradientType,
   colors: string[],
-  locations?: ?number[], // iOS only
+  locations?: ?(number[]), // iOS only
   radialRadius?: ?number,
   radialCenter?: ?[number, number],
 };
@@ -51,12 +48,7 @@ type RadialProps = {
 };
 
 export default {
-  Linear: (props: LinearProps) => (
-    <Gradient
-      {...props}
-      type="linear"
-    />
-  ),
+  Linear: (props: LinearProps) => <Gradient {...props} type="linear" />,
   Radial: ({radius, center, ...otherProps}: RadialProps) => (
     <Gradient
       {...otherProps}
